@@ -1,0 +1,93 @@
+[
+  {
+    "id": "poetry_typical",
+    "input": {
+      "title": "A Light in the Attic",
+      "price_gbp": 51.77,
+      "availability_text": "In stock (22 available)",
+      "rating_text": "Three",
+      "description": "It's hard to imagine a world without A Light in the Attic. This now-classic collection of poetry and drawings from Shel Silverstein celebrates the vibrant and imaginative mind of the beloved poet and artist."
+    },
+    "expected_category": "poetry"
+  },
+  {
+    "id": "childrens_typical",
+    "input": {
+      "title": "The Very Hungry Caterpillar",
+      "price_gbp": 12.99,
+      "availability_text": "In stock (10 available)",
+      "rating_text": "Five",
+      "description": "A picture book for very young children about a caterpillar who eats his way through a varied and very large quantity of food before pupating and emerging as a butterfly."
+    },
+    "expected_category": "childrens"
+  },
+  {
+    "id": "classics_typical",
+    "input": {
+      "title": "Pride and Prejudice",
+      "price_gbp": 15.50,
+      "availability_text": "In stock (5 available)",
+      "rating_text": "Five",
+      "description": "A classic novel of manners following Elizabeth Bennet as she deals with issues of marriage, morality, and misconceptions in the landed gentry society of early 19th-century England."
+    },
+    "expected_category": "classics"
+  },
+  {
+    "id": "nonfiction_typical",
+    "input": {
+      "title": "Sapiens: A Brief History of Humankind",
+      "price_gbp": 22.00,
+      "availability_text": "In stock (8 available)",
+      "rating_text": "Four",
+      "description": "A survey of the history of humankind from the evolution of archaic human species to the political and technological revolutions of the twenty-first century, examining how biology and history have defined us."
+    },
+    "expected_category": "non_fiction"
+  },
+  {
+    "id": "ambiguous_no_description",
+    "input": {
+      "title": "Sharp Objects",
+      "price_gbp": 47.82,
+      "availability_text": "In stock (20 available)",
+      "rating_text": "Four",
+      "description": null
+    },
+    "expected_category": "other",
+    "expected_flag": "missing_description"
+  },
+  {
+    "id": "when_unsure_vague_description",
+    "input": {
+      "title": "Notes",
+      "price_gbp": 9.99,
+      "availability_text": "In stock (3 available)",
+      "rating_text": "Two",
+      "description": "A collection of things the author thought about at various points."
+    },
+    "expected_category": "other",
+    "note": "Deliberately vague description — should trigger the when-unsure rule, not a confident genre guess."
+  },
+  {
+    "id": "price_anomaly_low",
+    "input": {
+      "title": "Free Sample Booklet",
+      "price_gbp": 0.50,
+      "availability_text": "In stock (1 available)",
+      "rating_text": "One",
+      "description": "A short promotional booklet given away at a bookstore event."
+    },
+    "expected_category": "non_fiction",
+    "expected_flag": "price_anomaly"
+  },
+  {
+    "id": "fiction_typical",
+    "input": {
+      "title": "The Hobbit",
+      "price_gbp": 18.20,
+      "availability_text": "In stock (14 available)",
+      "rating_text": "Five",
+      "description": "Bilbo Baggins is a hobbit who enjoys a comfortable, unambitious life, rarely traveling any farther than his pantry or cellar. But his contentment is disturbed when the wizard Gandalf and a company of dwarves arrive on his doorstep."
+    },
+    "expected_category": "fiction"
+  }
+]
