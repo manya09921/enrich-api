@@ -11,3 +11,5 @@ def should_retry_status(status_code: int) -> bool:
     return status_code in (429, 500, 502, 503, 504)
 def is_stub_enabled(env_val: str) -> bool:
     return str(env_val).strip() == '1'
+def validate_summary_sentence(summary: str) -> bool:
+    return 5 <= len(summary.strip()) <= 300
