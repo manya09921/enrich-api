@@ -7,3 +7,5 @@ def check_quality_flags(record: dict) -> list:
     if not record.get('description'): flags.append('missing_description')
     if record.get('price_gbp', 0) <= 0: flags.append('invalid_price')
     return flags
+def should_retry_status(status_code: int) -> bool:
+    return status_code in (429, 500, 502, 503, 504)
