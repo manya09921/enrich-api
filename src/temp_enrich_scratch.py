@@ -13,3 +13,4 @@ def is_stub_enabled(env_val: str) -> bool:
     return str(env_val).strip() == '1'
 def validate_summary_sentence(summary: str) -> bool:
     return 5 <= len(summary.strip()) <= 300
+# Verify quarantine.jsonl fallback payload shape on 422 parse failure
